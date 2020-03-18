@@ -16,6 +16,9 @@ public class Data_Status {
     public void averageValue(String args) throws DocumentException
     {
         File[] files = new File(args).listFiles();
+        /**
+         * 批量处理文件
+         */
         for (int i = 0; i < files.length; i++)
         {
             if (files[i].getName().substring(files[i].getName().length()-4, files[i].getName().length()).equals(".xml"))
