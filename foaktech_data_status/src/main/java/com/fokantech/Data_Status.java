@@ -74,8 +74,8 @@ public class Data_Status {
         System.out.println("height average value："+average_b);
     }
 
-    public static void main(String[] args) throws DocumentException {
+    public static void main(String[] args) throws Exception {
         Data_Status ds = new Data_Status();
-        ds.averageValue("Z:\\2020\\20200109");
+        ds.averageValue("");
     }
 }
