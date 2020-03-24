@@ -31,8 +31,8 @@ public class Data_Status {
                                     document.getRootElement();
                 List<Element> objects =
                                     rootElement.elements("object");
-
-                for (int j = 0; j < objects.size(); j++) {
+                for (int j = 0; j < objects.size(); j++)
+                {
                     String name =
                                     objects.get(j).element("name").getStringValue();
                     if (name.equals("car"))
