@@ -1,0 +1,42 @@
+DEBUG main com.fokantech.StatisticalData - 当前 model.txt结果集的准确性为：0.67%
+DEBUG main 2020-03-26 15:56:35,120 com.fokantech.StatisticalData - 当前 model.txt结果集的准确性为：0.67%
+DEBUG main 2020-03-26 16:07:04,601 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确性为：00.00%
+DEBUG main 2020-03-26 16:07:53,224 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确性为：100.00%
+DEBUG main 2020-03-26 16:08:19,518 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确性为：99.33%
+DEBUG main 2020-03-26 16:12:31,025 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确性为：95.33%
+DEBUG main 2020-03-26 16:13:04,208 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确性为：95.33%
+DEBUG main 2020-03-26 16:15:28,393 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确性为：95.33%
+DEBUG main 2020-03-26 16:15:28,395 com.fokantech.data.StatisticalData - 错误图片：cropimage_10_0.jpg,它的错误label是：苏Ed27LC9
+DEBUG main 2020-03-26 16:15:28,396 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_11.jpg,它的错误label是：浙E70N6S
+DEBUG main 2020-03-26 16:15:28,396 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_15.jpg,它的错误label是：苏dJ3BH19
+DEBUG main 2020-03-26 16:15:28,396 com.fokantech.data.StatisticalData - 错误图片：cropimage_119_18.jpg,它的错误label是：苏BMdsX3
+DEBUG main 2020-03-26 16:15:28,396 com.fokantech.data.StatisticalData - 错误图片：cropimage_11_3.jpg,它的错误label是：沪C83rMM
+DEBUG main 2020-03-26 16:15:28,398 com.fokantech.data.StatisticalData - 错误图片：cropimage_120_33.jpg,它的错误label是：苏E3Bs91P
+DEBUG main 2020-03-26 16:15:28,398 com.fokantech.data.StatisticalData - 错误图片：cropimage_121_0.jpg,它的错误label是：苏BdD7230
+DEBUG main 2020-03-26 16:19:04,091 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确率为：95.33%
+DEBUG main 2020-03-26 16:19:04,094 com.fokantech.data.StatisticalData - 当前 label.txt结果集的错误率为：4.67%
+DEBUG main 2020-03-26 16:19:04,094 com.fokantech.data.StatisticalData - 错误图片：cropimage_10_0.jpg,它的错误label是：苏Ed27LC9
+DEBUG main 2020-03-26 16:19:04,094 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_11.jpg,它的错误label是：浙E70N6S
+DEBUG main 2020-03-26 16:19:04,094 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_15.jpg,它的错误label是：苏dJ3BH19
+DEBUG main 2020-03-26 16:19:04,094 com.fokantech.data.StatisticalData - 错误图片：cropimage_119_18.jpg,它的错误label是：苏BMdsX3
+DEBUG main 2020-03-26 16:19:04,097 com.fokantech.data.StatisticalData - 错误图片：cropimage_11_3.jpg,它的错误label是：沪C83rMM
+DEBUG main 2020-03-26 16:19:04,097 com.fokantech.data.StatisticalData - 错误图片：cropimage_120_33.jpg,它的错误label是：苏E3Bs91P
+DEBUG main 2020-03-26 16:19:04,097 com.fokantech.data.StatisticalData - 错误图片：cropimage_121_0.jpg,它的错误label是：苏BdD7230
+DEBUG main 2020-03-26 16:30:35,655 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确率为：95.33%
+DEBUG main 2020-03-26 16:30:42,555 com.fokantech.data.StatisticalData - 当前 label.txt结果集的错误率为：4.67%
+DEBUG main 2020-03-26 16:30:42,555 com.fokantech.data.StatisticalData - 错误图片：cropimage_10_0.jpg,它的错误label是：苏Ed27LC9
+DEBUG main 2020-03-26 16:30:42,555 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_11.jpg,它的错误label是：浙E70N6S
+DEBUG main 2020-03-26 16:30:42,555 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_15.jpg,它的错误label是：苏dJ3BH19
+DEBUG main 2020-03-26 16:30:42,555 com.fokantech.data.StatisticalData - 错误图片：cropimage_119_18.jpg,它的错误label是：苏BMdsX3
+DEBUG main 2020-03-26 16:30:42,557 com.fokantech.data.StatisticalData - 错误图片：cropimage_11_3.jpg,它的错误label是：沪C83rMM
+DEBUG main 2020-03-26 16:30:42,557 com.fokantech.data.StatisticalData - 错误图片：cropimage_120_33.jpg,它的错误label是：苏E3Bs91P
+DEBUG main 2020-03-26 16:30:42,557 com.fokantech.data.StatisticalData - 错误图片：cropimage_121_0.jpg,它的错误label是：苏BdD7230
+DEBUG main 2020-03-26 16:31:20,781 com.fokantech.data.StatisticalData - 当前 label.txt结果集的准确率为：95.33%
+DEBUG main 2020-03-26 16:31:27,639 com.fokantech.data.StatisticalData - 当前 label.txt结果集的错误率为：4.67%
+DEBUG main 2020-03-26 16:31:33,813 com.fokantech.data.StatisticalData - 错误图片：cropimage_10_0.jpg,它的错误label是：苏Ed27LC9
+DEBUG main 2020-03-26 16:31:33,814 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_11.jpg,它的错误label是：浙E70N6S
+DEBUG main 2020-03-26 16:31:33,814 com.fokantech.data.StatisticalData - 错误图片：cropimage_118_15.jpg,它的错误label是：苏dJ3BH19
+DEBUG main 2020-03-26 16:31:33,814 com.fokantech.data.StatisticalData - 错误图片：cropimage_119_18.jpg,它的错误label是：苏BMdsX3
+DEBUG main 2020-03-26 16:31:33,815 com.fokantech.data.StatisticalData - 错误图片：cropimage_11_3.jpg,它的错误label是：沪C83rMM
+DEBUG main 2020-03-26 16:31:33,815 com.fokantech.data.StatisticalData - 错误图片：cropimage_120_33.jpg,它的错误label是：苏E3Bs91P
+DEBUG main 2020-03-26 16:31:33,816 com.fokantech.data.StatisticalData - 错误图片：cropimage_121_0.jpg,它的错误label是：苏BdD7230

@@ -1,5 +1,12 @@
-package com.fokantech;
+package com.fokantech.conf;
 
+import com.fokantech.conf.ConfigurationAttribute;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -161,10 +168,16 @@ public class ResultSet {
         return pList;
     }
 
-    public static void main(String[] args) {
-        ResultSet rs  = new ResultSet();
-        List<String> plates = rs.plates();
-        int q = plates.indexOf("苏EOGV50");
-        System.out.println(q);
+    public static void main(String[] args) throws IOException {
+        File file = new File("D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_base\\01-0_5-267&511_411&569-411&568_273&569_267&512_405&511-0_0_27_31_32_23_24-128-43.jpg");
+        BufferedImage bufferedImage = ImageIO.read(file);
+        ConfigurationAttribute configurationAttribute = new ConfigurationAttribute();
+        Graphics g = bufferedImage.getGraphics();
+        g.setColor(Color.YELLOW);
+        int[] x = {405,267,273,411};
+        int[] y = {511,512,569,568};
+        Polygon p = new Polygon(x,y,4);
+        g.drawPolygon(p);
+        configurationAttribute.imshow(file.getName(),bufferedImage);
     }
 }

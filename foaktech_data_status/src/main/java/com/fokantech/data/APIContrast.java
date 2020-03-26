@@ -1,6 +1,8 @@
-package com.fokantech;
+package com.fokantech.data;
 
 import com.baidu.aip.ocr.AipOcr;
+import com.fokantech.conf.ConfigurationAttribute;
+import com.fokantech.conf.ResultSet;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.json.JSONArray;
@@ -46,11 +48,11 @@ public class APIContrast {
                         yList.add(y);
                     }
                 }
-                int[] x = {xList.get(0),xList.get(1),xList.get(2),xList.get(3)};
-                int[] y = {yList.get(0),yList.get(1),yList.get(2),yList.get(3)};
-                Polygon p = new Polygon(x,y,4);
-                g.drawPolygon(p);
-                ImageIO.write(bufferedImage,"jpg",new File("C:\\Users\\tangxiao\\Desktop\\FOKANTECH_PLATE\\"+plates.get(0)+".jpg"));
+//                int[] x = {xList.get(0),xList.get(1),xList.get(2),xList.get(3)};
+//                int[] y = {yList.get(0),yList.get(1),yList.get(2),yList.get(3)};
+//                Polygon p = new Polygon(x,y,4);
+//                g.drawPolygon(p);
+                ImageIO.write(bufferedImage,"jpg",new File("C:\\Users\\FKT00093\\Desktop\\res\\"+plates.get(0)+".jpg"));
                 xList.clear();
                 yList.clear();
                 plates.clear();
@@ -82,34 +84,36 @@ public class APIContrast {
     }
 
     public static void main(String[] args) throws Exception {
-        String modelPath = "C:\\Users\\FKT00093\\Desktop\\Desktop\\FOKANTECH_ocr_mix_unfixed_06DG" ;
-        String testPath = "C:\\Users\\FKT00093\\Desktop\\Desktop\\img";
-        double testLen = new File(testPath).listFiles().length;
-//        readingAloud.readingAloud("当前测试图像："+testLen+"张");
-        log.debug("当前测试图像："+testLen+"张");
-
-        double resLen = new File(modelPath).listFiles().length;
-//        readingAloud.readingAloud("当前识别图像："+ resLen + "张");
-        log.info("当前识别图片为：\t"+resLen+"张");
-
-        List<String> compare = compare(modelPath);
-
-        double a = compare.size() / resLen;
-//        readingAloud.readingAloud("当前检测错误张数为：\t"+compare.size()+"张");
-        log.info("当前检测错误张数为：\t"+compare.size()+"张");
-//        readingAloud.readingAloud("当前检测百分之百的情况下误检率为：\t"+getPercentFormat(a,2,2));
-        log.info("当前检测百分之百正确的情况下误检率为：\t"+getPercentFormat(a,2,2));
-
-        double c = 1 - a;
-//        readingAloud.readingAloud("当前检测正确率为：\t"+getPercentFormat(c,2,2));
-        log.info("当前检测正确率为：\t"+getPercentFormat(c,2,2));
-
-        for (String errorName : compare) {
-//            readingAloud.readingAloud("当前错误识别图片为："+errorName);
-            log.info("当前错误识别图片为："+errorName);
-            BufferedImage bufferedImage = ImageIO.read(new File(modelPath+"\\"+errorName));
-            config.imshow(errorName,bufferedImage);
-        }
+        AipOcr ocr = null;
+        sample("C:\\Users\\FKT00093\\Desktop\\test",ocr);
+//        String modelPath = "C:\\Users\\FKT00093\\Desktop\\Desktop\\FOKANTECH_ocr_pb_no_batch" ;
+//        String testPath = "C:\\Users\\FKT00093\\Desktop\\Desktop\\img";
+//        double testLen = new File(testPath).listFiles().length;
+////        readingAloud.readingAloud("当前测试图像："+testLen+"张");
+//        log.debug("当前测试图像："+testLen+"张");
+//
+//        double resLen = new File(modelPath).listFiles().length;
+////        readingAloud.readingAloud("当前识别图像："+ resLen + "张");
+//        log.info("当前识别图片为：\t"+resLen+"张");
+//
+//        List<String> compare = compare(modelPath);
+//
+//        double a = compare.size() / resLen;
+////        readingAloud.readingAloud("当前检测错误张数为：\t"+compare.size()+"张");
+//        log.info("当前检测错误张数为：\t"+compare.size()+"张");
+////        readingAloud.readingAloud("当前检测百分之百的情况下误检率为：\t"+getPercentFormat(a,2,2));
+//        log.info("当前检测百分之百正确的情况下误检率为：\t"+getPercentFormat(a,2,2));
+//
+//        double c = 1 - a;
+////        readingAloud.readingAloud("当前检测正确率为：\t"+getPercentFormat(c,2,2));
+//        log.info("当前检测正确率为：\t"+getPercentFormat(c,2,2));
+//
+//        for (String errorName : compare) {
+////            readingAloud.readingAloud("当前错误识别图片为："+errorName);
+//            log.info("当前错误识别图片为："+errorName);
+//            BufferedImage bufferedImage = ImageIO.read(new File(modelPath+"\\"+errorName));
+//            config.imshow(errorName,bufferedImage);
+//        }
     }
 
 }

@@ -1,4 +1,4 @@
-package com.fokantech;
+package com.fokantech.conf;
 
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.Dispatch;
@@ -15,6 +15,15 @@ public class ConfigurationAttribute extends JComponent
     public static final String APPID = "16315874";
     public static final String APIKEY = "ujYmHGQtIRgiriIp1soW9irT";
     public static final String SECRETKEY = "CBN0uklyL4gPACbZWKHjjb4M3ZgxGW7j";
+    public static final String CCPD_BASE = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_base";
+    public static final String CCPD_BLUR = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_blur";
+    public static final String CCPD_CHALLENGE = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_challenge";
+    public static final String CCPD_DP = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_db";
+    public static final String CCPD_FN = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_fn";
+    public static final String CCPD_NP = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_np";
+    public static final String CCPD_ROTATE = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_rotate";
+    public static final String CCPD_TILT = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_tilt";
+    public static final String CCPD_WEATHER = "D:\\BaiduNetdiskDownload\\CCPD2019\\ccpd_weather";
 
     public ConfigurationAttribute()
     {
@@ -224,5 +233,21 @@ public class ConfigurationAttribute extends JComponent
         pList.add("沪AUD308");
         return pList;
     }
-
+    public String[] provinces()
+    {
+        String[] provinces = {"皖", "沪", "津", "渝", "冀", "晋", "蒙", "辽", "吉", "黑", "苏", "浙", "京", "闽", "赣", "鲁", "豫", "鄂", "湘", "粤", "桂", "琼", "川", "贵", "云", "藏", "陕", "甘", "青", "宁", "新", "警", "学", "O"};
+        return provinces;
+    }
+    public String[] alphabets()
+    {
+        String[] alphabets = {"A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "U", "V", "W",
+                "X", "Y", "Z", "O"};
+        return alphabets;
+    }
+    public String[] numbers()
+    {
+        String[] numbers = {"A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "U", "V", "W",
+                "X", "Y", "Z", "O", "1", "2", "3", "4", "5", "6", "7", "8", "9", "O"};
+        return numbers;
+    }
 }
