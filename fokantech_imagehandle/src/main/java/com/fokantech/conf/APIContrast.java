@@ -10,7 +10,6 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -22,15 +21,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class APIContrast {
+/**
+ * @author FKT00093
+ */
 
+public class APIContrast {
+    /**
+     * 使用百度API进行车牌标定
+     */
     public static final List<Integer> xList = new ArrayList<>();
     public static final List<Integer> yList = new ArrayList<>();
     public static final List<String> plates = new ArrayList<>();
     public static final Log log = LogFactory.getLog(APIContrast.class);
     public static final ConfigurationAttribute config = new ConfigurationAttribute();
 
-    public static void sample(String path ,AipOcr client ) throws Exception {
+    public static void sample(String path ,AipOcr client , String ouputPath ) throws Exception {
         client = new AipOcr(ConfigurationAttribute.APPID, ConfigurationAttribute.APIKEY, ConfigurationAttribute.SECRETKEY);
         File[] files = new File(path).listFiles();
         for (int i = 0; i < files.length; i++) {
@@ -59,10 +64,10 @@ public class APIContrast {
                         Element y1 = bndbox.addElement("y" + (k + 1));
                         y1.setText(String.valueOf(y));
                     }
-                    ImageIO.write(bufferedImage,"jpg",new File("E:\\"+number+".jpg"));
+                    ImageIO.write(bufferedImage,"jpg",new File(ouputPath+"\\"+number+".jpg"));
                     OutputFormat format = OutputFormat.createPrettyPrint();
                     format.setEncoding("utf-8");
-                    Writer out = new FileWriter("D:\\test\\"+number+".xml");
+                    Writer out = new FileWriter(ouputPath+"\\"+number+".xml");
                     //创建一个dom4j创建xml的对象
                     XMLWriter writer = new XMLWriter(out, format);
                     //调用write方法将doc文档写到指定路径
@@ -73,6 +78,13 @@ public class APIContrast {
         }
     }
 
+    /**
+     * 用于计算百分比
+     * @param d
+     * @param IntegerDigits
+     * @param FractionDigits
+     * @return
+     */
     public static String getPercentFormat(double d,int IntegerDigits,int FractionDigits){
         NumberFormat nf = NumberFormat.getPercentInstance();
         nf.setMaximumIntegerDigits(IntegerDigits);
@@ -81,10 +93,16 @@ public class APIContrast {
         return str;
     }
 
+    /**
+     * 主函数运行
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         AipOcr ocr = null;
-        String modelPath = "D:\\阳澄湖专项\\TestImage" ;
-        sample(modelPath,ocr);
+        String modelPath = "" ;
+        String outputPath = "" ;
+        sample(modelPath,ocr,outputPath);
     }
 
 }

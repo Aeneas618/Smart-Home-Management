@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class ImageUI   extends JComponent {
+public class ImageUI  extends JComponent {
     private BufferedImage bufferedImage;
 
     public ImageUI(){

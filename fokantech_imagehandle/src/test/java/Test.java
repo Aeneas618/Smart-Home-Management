@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Test {
@@ -30,7 +29,6 @@ public class Test {
             }
         }
         for (String s : plate) {
-            System.out.println(s);
             boolean contains = result.contains(s);
             if (contains){
                 success.add(s);
