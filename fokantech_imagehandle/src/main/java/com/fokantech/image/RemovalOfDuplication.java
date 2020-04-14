@@ -10,8 +10,7 @@ import java.util.List;
 
 public class RemovalOfDuplication {
     public static void main(String[] args) throws Exception {
-//        test1("E:\\test","E:\\test1");
-        remove("E:\\test1");
+        binaryImage();
     }
 
     public static void test1(String inputImagePath,String outputImagePath)throws Exception{
@@ -38,4 +37,24 @@ public class RemovalOfDuplication {
             }
         }
     }
+
+
+    public static void binaryImage() throws IOException {
+        File file = new File( "C:\\Users\\FKT00093\\Desktop\\1\\01.jpg");
+        BufferedImage image = ImageIO.read(file);
+
+        int width = image.getWidth();
+        int height = image.getHeight();
+
+        BufferedImage grayImage = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_BINARY);//重点，技巧在这个参数BufferedImage.TYPE_BYTE_BINARY
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                int rgb = image.getRGB(i, j);
+                grayImage.setRGB(i, j, rgb);
+            }
+        }
+        ImageIO.write(grayImage, "jpg", new File("D:\\1.jpg"));
+    }
+
+
 }

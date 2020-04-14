@@ -100,9 +100,9 @@ public class APIContrast {
      */
     public static void main(String[] args) throws Exception {
         AipOcr ocr = null;
-        String modelPath = "" ;
-        String outputPath = "" ;
-        sample(modelPath,ocr,outputPath);
+        String modelImagePath = "E:\\Result\\2_IMG" ;
+        String outputPath = "E:\\" ;
+        sample(modelImagePath,ocr,outputPath);
     }
 
 }
