@@ -9,7 +9,8 @@ import org.dom4j.io.XMLWriter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import xyz.dreamthch.dao.LicensePlateCalibrationmMapper;
+import xyz.dreamthch.mapper.LicensePlateCalibrationm;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,7 +18,7 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LicensePlateCalibrationmImpl implements LicensePlateCalibrationmMapper {
+public class LicensePlateCalibrationmImpl implements LicensePlateCalibrationm {
 
     @Override
     public JSONObject getPlateDataList(String APPID, String APIKEY, String SECRETKEY, File file) {
@@ -51,7 +52,7 @@ public class LicensePlateCalibrationmImpl implements LicensePlateCalibrationmMap
     }
 
     @Override
-    public Map<String, Integer> getGenerateConfigurationFiles(JSONObject object) {
+    public Map<String, Integer> savePlateCoordinates(JSONObject object) {
 
         try {
             JSONArray words_result = object.getJSONArray("words_result");
@@ -114,5 +115,6 @@ public class LicensePlateCalibrationmImpl implements LicensePlateCalibrationmMap
             e.printStackTrace();
         }
     }
+
 
 }

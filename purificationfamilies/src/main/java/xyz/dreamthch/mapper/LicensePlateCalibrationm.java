@@ -1,11 +1,11 @@
-package xyz.dreamthch.dao;
+package xyz.dreamthch.mapper;
 
 import org.json.JSONObject;
 
 import java.io.File;
 import java.util.Map;
 
-public interface LicensePlateCalibrationmMapper {
+public interface LicensePlateCalibrationm {
     /**
      *  Access to license plate data containers through aip
      * @param APPID
@@ -28,7 +28,7 @@ public interface LicensePlateCalibrationmMapper {
      * @param object
      * @return
      */
-    Map<String,Integer> getGenerateConfigurationFiles(JSONObject object);
+    Map<String,Integer> savePlateCoordinates(JSONObject object);
 
     /**
      *  Generate configuration files based on coordinates
