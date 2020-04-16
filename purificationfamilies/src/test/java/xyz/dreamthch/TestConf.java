@@ -10,7 +10,7 @@ public class TestConf {
         File[] files = new File("./xml").listFiles();
         for (File file : files) {
             String newName = file.getName().substring(0, file.getName().length() - 4);
-            File fileImg = new File("E:\\car_lp_img_20200407\\"+newName+".jpg");
+            File fileImg = new File("E:\\test\\"+newName+".jpg");
             if (fileImg != null) {
                 fileImg.delete();
             }
